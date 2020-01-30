@@ -40,7 +40,7 @@ class App extends React.Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <FeatureContainer />
+          <FeatureContainer features={this.state.selected} />
           <SummaryContainer />
           <div className="summary__total">
             <div className="summary__total__label">Total</div>

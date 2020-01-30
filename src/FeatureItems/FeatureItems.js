@@ -4,6 +4,7 @@ import React from 'react';
 class FeatureItems extends React.Component {
   
   render() {
+    console.log(this.props)
     return (
         <fieldset className="feature" /*key={featureHash}*/>
           <legend className="feature__name">
