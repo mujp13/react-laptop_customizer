@@ -3,12 +3,21 @@ import FeatureItems from '../FeatureItems/FeatureItems'
 
 class FeatureContainer extends React.Component {
  
-
   render() {
+    const { itemOptions } = this.props;
+    const fieldTitles = Object.keys(itemOptions);
+
     return (
       <form className="main__form">
         <h2>Customize your laptop</h2>
-        <FeatureItems features={this.props} />
+        {itemOptions &&
+          Object.values(itemOptions).map((item, index) => (
+            <FeatureItems
+              key={itemOptions.name}
+              fieldTitle={fieldTitles[index]}
+              item={item}
+            />
+          ))}
       </form>
     )
   }
