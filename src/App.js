@@ -56,10 +56,6 @@ class App extends React.Component {
   };
 
   render() {
-    const total = Object.keys(this.state.selected).reduce(
-      (acc, curr) => acc + this.state.selected[curr].cost,
-      0
-    );
 
     return (
       <div className="App">
@@ -76,12 +72,6 @@ class App extends React.Component {
             selectedOptions={this.state.selected}
             updateFeature={this.updateFeature}
           />
-          <div className="summary__total">
-            <div className="summary__total__label">Total</div>
-            <div className="summary__total__value">
-              {USCurrencyFormat.format(total)}
-            </div>
-          </div>
         </main>
       </div>
     );

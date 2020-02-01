@@ -9,6 +9,7 @@ const USCurrencyFormat = new Intl.NumberFormat("en-US", {
 class SummaryItems extends React.Component {
   render() {
     const {fieldTitle} = this.props;
+    
     return (
       <div className="summary__option" /*key={featureHash}*/>
         <div className="summary__option__label">{fieldTitle}</div>

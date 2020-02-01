@@ -1,5 +1,6 @@
 import React from 'react';
 import SummaryItems from '../SummaryItems/SummaryItems'
+import SummaryTotal from '../SummaryTotal/SummaryTotal'
 import './SummaryContainer.css';
 
 class SummaryContainer extends React.Component {
@@ -19,6 +20,9 @@ class SummaryContainer extends React.Component {
             selectedOptions={this.props.selectedOptions}
           />
         ))}
+          <SummaryTotal 
+            selected={this.props.selectedOptions}
+          />
       </section>
     )
   }
