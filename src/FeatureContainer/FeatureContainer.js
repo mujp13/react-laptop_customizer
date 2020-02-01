@@ -1,5 +1,6 @@
 import React from 'react';
 import FeatureItems from '../FeatureItems/FeatureItems'
+import './FeatureContainer.css';
 
 class FeatureContainer extends React.Component {
  

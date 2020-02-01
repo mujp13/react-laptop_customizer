@@ -1,5 +1,6 @@
 import React from 'react';
 import SummaryItems from '../SummaryItems/SummaryItems'
+import './SummaryContainer.css';
 
 class SummaryContainer extends React.Component {
   render() {

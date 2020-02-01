@@ -1,4 +1,5 @@
 import React from 'react';
+import './SummaryItems.css';
 
 const USCurrencyFormat = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -7,8 +8,7 @@ const USCurrencyFormat = new Intl.NumberFormat("en-US", {
 
 class SummaryItems extends React.Component {
   render() {
-    const { item, fieldTitle} = this.props;
-    const items = Object.values(item);
+    const {fieldTitle} = this.props;
     return (
       <div className="summary__option" /*key={featureHash}*/>
         <div className="summary__option__label">{fieldTitle}</div>
