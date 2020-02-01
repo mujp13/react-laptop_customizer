@@ -23,8 +23,8 @@ class FeatureItems extends React.Component {
               id={item.name}
               className="feature__option"
               name={fieldTitle}
-              /*checked={item.name === this.state.selected[feature].name}*/
-              /*onChange={e => this.updateFeature(feature, item)}*/
+              checked={item.name === this.props.selectedOption.name}
+              onChange={e => this.props.updateFeature(fieldTitle, item)}
             />
             <label htmlFor={item.name} className="feature__label">
               {item.name} ({USCurrencyFormat.format(item.cost)})

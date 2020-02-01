@@ -16,6 +16,8 @@ class FeatureContainer extends React.Component {
               key={itemOptions.name}
               fieldTitle={fieldTitles[index]}
               item={item}
+              selectedOption={this.props.selectedOptions[fieldTitles[index]]}
+              updateFeature={this.props.updateFeature}
             />
           ))}
       </form>

@@ -3,10 +3,13 @@ import SummaryItems from '../SummaryItems/SummaryItems'
 
 class SummaryContainer extends React.Component {
   render() {
+
     return (
       <section className="main__summary">
         <h2>Your cart</h2>
-          <SummaryItems />
+          <SummaryItems 
+            selectedOptions={this.props.selectedOptions}
+          />
       </section>
     )
   }

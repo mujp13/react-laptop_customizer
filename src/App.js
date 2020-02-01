@@ -13,7 +13,7 @@ class App extends React.Component {
   state = {
     itemOptions: {
       Processor: {
-        1: { name: "17th Generation Intel Core HB", cost: 700 },
+        1: { name: "17th Generation Intel Core HB (7 Core with donut spare)", cost: 700 },
         2: { name: "Professor X AMD Fire Breather", cost: 1200 }
       },
       "Operating System": {
@@ -27,6 +27,7 @@ class App extends React.Component {
       Display: {
         1: { name: '15.6" UHD (3840 x 2160)', cost: 1500 },
         2: { name: '15.3" HGTV (3840 x 2160)', cost: 1400 }
+
       }
     },
     selected: {
@@ -35,15 +36,17 @@ class App extends React.Component {
         cost: 700
       },
       "Operating System": { name: "Ubuntu Linux 16.04", cost: 200 },
-      "Video Card": { name: "Toyota Corolla 1.5v", cost: 1150.98 },
+      "Video Card": { name: "Nvidia GTX1080", cost: 1150.98 },
       Display: {
-        name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
+        name: '15.6" UHD (3840 x 2160)',
         cost: 1500
       }
     }
   };
 
   updateFeature = (feature, newValue) => {
+    console.log(feature)
+    console.log(newValue)
     // Toggle between laptop parts
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
@@ -65,9 +68,11 @@ class App extends React.Component {
         <main>
           <FeatureContainer 
             itemOptions={this.state.itemOptions}
-            filterOption={this.state.updateFeature}
+            selectedOptions={this.state.selected}
+            updateFeature={this.updateFeature}
           />
           <SummaryContainer 
+            selectedOptions={this.state.selected}
             updateFeature={this.updateFeature}
           />
           <div className="summary__total">
