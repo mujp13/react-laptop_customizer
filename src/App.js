@@ -1,6 +1,6 @@
 import React from "react";
 //import slugify from 'slugify';
-//import './App.css';
+import './App.css';
 import FeatureContainer from "./FeatureContainer/FeatureContainer";
 import SummaryContainer from "./SummaryContainer/SummaryContainer";
 
@@ -60,6 +60,7 @@ class App extends React.Component {
       (acc, curr) => acc + this.state.selected[curr].cost,
       0
     );
+
     return (
       <div className="App">
         <header>
