@@ -5,18 +5,22 @@ const USCurrencyFormat = new Intl.NumberFormat("en-US", {
   currency: "USD"
 });
 
-
-
 class SummaryItems extends React.Component {
   render() {
+    const { item, fieldTitle} = this.props;
+    const items = Object.values(item);
     return (
-      <div className="summary__option" /*key={featureHash}*/>
-        <div className="summary__option__label">1</div>
-        <div className="summary__option__value">2</div>
-        <div className="summary__option__cost">
-          3
+      <>
+      {items.map(item => (
+        <div className="summary__option" /*key={featureHash}*/>
+          <div className="summary__option__label">{fieldTitle}</div>
+          <div className="summary__option__value">{this.props.item.name}</div>
+          <div className="summary__option__cost">
+            {USCurrencyFormat.format(this.props.item.cost)}
+          </div>
         </div>
-      </div>
+      ))}
+      </>
     )
   }
 }
